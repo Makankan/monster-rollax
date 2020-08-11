@@ -13,7 +13,7 @@ class App extends Component{
     }
   }
   handleChange=(e)=>{
-    this.setState({searchFields:e.target.value})
+    this.setState({searchFields:e.target.value});
   }
   componentDidMount(){
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -27,8 +27,8 @@ class App extends Component{
       <div className="App">
         <h1>Monster Rollax</h1>
         <Search
-          placeHolder ='search monster'
-          handleClick={this.handleChanged}
+          placeHolder ='search monsters'
+          handleClick={this.handleChange}
         />
         {/* passing via props to anotheer component */}
         <CardList monsters={filteredMonsters}/> 
